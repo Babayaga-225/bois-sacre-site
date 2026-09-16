@@ -1,0 +1,275 @@
+/* ============================================================================
+   Bois Sacré · Design tokens
+   Source de vérité couleurs, typographie, spacing, radius, shadow, transitions.
+   Aucune valeur "magique" ailleurs dans le code : tout passe par ces tokens.
+   ============================================================================ */
+
+:root {
+  /* ----- Palette · Bois Sacré ------------------------------------------------
+     Palette validée : DA Kave Home ajustée + identité Bois Sacré.
+     - Fond ivoire chaud pour respiration (jamais blanc pur)
+     - Tan/bois = couleur signature (CTA, chips actifs, hover)
+     - Brun profond = texte principal + accents forts
+     - Or ambré désaturé = accent parcimonieux (badges promo, alertes)
+     - Olive sourd = validation, réassurance
+     ------------------------------------------------------------------------- */
+  --color-fond:            #F7F5F1;   /* fond page, respirations */
+  --color-fond-alt:        #EFEBE3;   /* fond section alternée, cards */
+  --color-tan:             #CC916E;   /* signature bois, CTA principal */
+  --color-tan-hover:       #B67E5D;   /* hover tan (assombri 10%) */
+  --color-bois:            #1C0000;   /* texte principal, header, footer */
+  --color-bois-soft:       #2E1A17;   /* texte fort alternatif, ombres */
+  --color-or:              #D89545;   /* accent désaturé (badges, promos) */
+  --color-olive:           #7A8A6D;   /* validation, réassurance, success */
+  --color-olive-soft:      #94A487;   /* olive clair pour fonds success */
+
+  /* Texte */
+  --color-texte:           var(--color-bois);       /* corps principal */
+  --color-texte-mut:       #6B5F5A;                 /* secondaire, meta, labels */
+  --color-texte-faible:    #9C918D;                 /* placeholders, disabled */
+  --color-texte-inverse:   var(--color-fond);       /* texte sur fond sombre */
+
+  /* Bordures & séparateurs */
+  --color-border:          #E1DAD1;   /* bordures cards, séparateurs */
+  --color-border-fort:     #CDBFB0;   /* bordures inputs focus */
+
+  /* États sémantiques */
+  --color-success:         var(--color-olive);
+  --color-success-bg:      rgba(122, 138, 109, 0.10);
+  --color-warn:            var(--color-or);
+  --color-warn-bg:         rgba(216, 149, 69, 0.12);
+  --color-error:           #B04A3E;   /* rouge sourd, cohérent palette */
+  --color-error-bg:        rgba(176, 74, 62, 0.10);
+  --color-info:            var(--color-tan);
+  --color-info-bg:         rgba(204, 145, 110, 0.10);
+
+  /* Overlays */
+  --overlay-scrim:         rgba(28, 0, 0, 0.55);      /* lightbox, modal */
+  --overlay-scrim-light:   rgba(28, 0, 0, 0.20);      /* hover image */
+
+  /* ----- Typographie -------------------------------------------------------
+     Fraunces (titres, serif éditorial chaleureux, variable font)
+     Manrope (corps, sans-serif humaniste, variable font)
+     Fallbacks systèmes garantissent 0 FOIT même Google Fonts down.
+     ------------------------------------------------------------------------ */
+  --font-titre:            'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-corps:            'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
+                           'Segoe UI', sans-serif;
+
+  /* Tailles fluides (mobile 375px → desktop 1440px)
+     Formule clamp(min, préférée, max) avec préférée en vw pour scaling doux. */
+  --fs-display:            clamp(2.5rem,  5vw + 1rem, 4.5rem);   /* 40 → 72px, hero */
+  --fs-h1:                 clamp(2rem,    3.5vw + 1rem, 3rem);   /* 32 → 48px */
+  --fs-h2:                 clamp(1.5rem,  2.2vw + 0.8rem, 2.25rem); /* 24 → 36px */
+  --fs-h3:                 clamp(1.25rem, 1.5vw + 0.7rem, 1.75rem); /* 20 → 28px */
+  --fs-h4:                 clamp(1.125rem, 0.8vw + 0.9rem, 1.375rem); /* 18 → 22px */
+  --fs-corps:              clamp(0.9375rem, 0.3vw + 0.85rem, 1rem); /* 15 → 16px */
+  --fs-corps-lg:           clamp(1rem, 0.5vw + 0.9rem, 1.125rem); /* 16 → 18px */
+  --fs-petit:              0.875rem;  /* 14px meta, label */
+  --fs-mini:               0.75rem;   /* 12px badge, footer disclaimers */
+
+  /* Poids */
+  --fw-regular:            400;
+  --fw-medium:             500;
+  --fw-semi:               600;
+  --fw-bold:               700;
+
+  /* Line-heights */
+  --lh-tight:              1.1;    /* titres display */
+  --lh-serree:             1.25;   /* h1-h3 */
+  --lh-normale:            1.5;    /* corps */
+  --lh-aérée:              1.7;    /* long texte, article blog */
+
+  /* Letter-spacing */
+  --ls-serree:             -0.02em; /* titres display */
+  --ls-normale:            0;
+  --ls-large:              0.05em;  /* labels uppercase, boutons */
+  --ls-xlarge:             0.15em;  /* meta chip, tagline */
+
+  /* ----- Spacing · échelle 8pt ---------------------------------------------
+     Basé sur 4px (0.25rem) pour finesse + 8pt majeur pour rythme visuel.
+     ------------------------------------------------------------------------ */
+  --space-0:               0;
+  --space-1:               0.25rem;   /* 4px */
+  --space-2:               0.5rem;    /* 8px */
+  --space-3:               0.75rem;   /* 12px */
+  --space-4:               1rem;      /* 16px */
+  --space-5:               1.5rem;    /* 24px */
+  --space-6:               2rem;      /* 32px */
+  --space-7:               3rem;      /* 48px */
+  --space-8:               4rem;      /* 64px */
+  --space-9:               6rem;      /* 96px */
+  --space-10:              8rem;      /* 128px */
+
+  /* Espacements sémantiques utiles */
+  --pad-section-y:         clamp(3rem, 5vw + 2rem, 6rem);   /* respiration verticale section */
+  --pad-container-x:       clamp(1rem, 3vw, 2.5rem);        /* gouttières page mobile → desktop */
+  --gap-grid:              clamp(1rem, 2vw, 1.5rem);        /* gap grille produits */
+
+  /* ----- Layout ------------------------------------------------------------ */
+  --container-max:         1440px;
+  --container-narrow:      880px;    /* article blog, pages textuelles */
+  --container-wide:        1600px;   /* hero, moodboards immersifs */
+
+  --header-h-mobile:       64px;
+  --header-h-desktop:      88px;
+  --header-h-total-mobile: calc(var(--header-h-mobile) + 40px);  /* + bandeau annonce */
+  --header-h-total-desktop:calc(var(--header-h-desktop) + 40px);
+
+  /* ----- Radius ------------------------------------------------------------ */
+  --radius-none:           0;
+  --radius-xs:             2px;
+  --radius-sm:             4px;
+  --radius-md:             8px;
+  --radius-lg:             12px;     /* cards produit */
+  --radius-xl:             16px;     /* modal, drawer */
+  --radius-pill:           999px;    /* boutons, chips */
+  --radius-cercle:         50%;
+
+  /* ----- Ombres · discrètes, jamais Material -------------------------------
+     Basées teinte bois pour cohérence chromatique (pas de gris neutre pur).
+     ------------------------------------------------------------------------ */
+  --shadow-xs:  0 1px 2px rgba(28, 0, 0, 0.04);
+  --shadow-sm:  0 2px 4px rgba(28, 0, 0, 0.06),
+                0 1px 2px rgba(28, 0, 0, 0.04);
+  --shadow-md:  0 4px 12px rgba(28, 0, 0, 0.08),
+                0 2px 4px rgba(28, 0, 0, 0.04);
+  --shadow-lg:  0 12px 32px rgba(28, 0, 0, 0.12),
+                0 4px 8px rgba(28, 0, 0, 0.06);
+  --shadow-xl:  0 24px 56px rgba(28, 0, 0, 0.18),
+                0 8px 16px rgba(28, 0, 0, 0.08);
+
+  /* Focus ring accessibilité (WCAG contraste AA) */
+  --focus-ring:            0 0 0 3px rgba(204, 145, 110, 0.45);
+  --focus-ring-invert:     0 0 0 3px rgba(247, 245, 241, 0.55);
+
+  /* ----- Transitions · rapides, précises, jamais bounce --------------------
+     Ease-out standard pour toutes les micro-interactions.
+     Durées : 120ms pour instantané (hover), 200ms pour changement d'état,
+              320ms pour ouverture drawer/modal.
+     ------------------------------------------------------------------------ */
+  --ease:                  cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out:              cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:               cubic-bezier(0.4, 0, 1, 1);
+
+  --dur-instant:           120ms;
+  --dur-rapide:            200ms;
+  --dur-moyenne:           320ms;
+  --dur-lente:             500ms;
+
+  --transition-base:       all var(--dur-rapide) var(--ease);
+  --transition-color:      color var(--dur-instant) var(--ease),
+                           background-color var(--dur-instant) var(--ease),
+                           border-color var(--dur-instant) var(--ease);
+  --transition-transform:  transform var(--dur-rapide) var(--ease);
+  --transition-opacity:    opacity var(--dur-rapide) var(--ease);
+
+  /* ----- Z-index scale ---------------------------------------------------- */
+  --z-under:               -1;
+  --z-base:                0;
+  --z-elevated:            10;      /* cards hover */
+  --z-sticky:              100;     /* header, sidebar sticky */
+  --z-drawer:              500;     /* drawer mobile menu */
+  --z-modal:               1000;    /* modal, lightbox */
+  --z-toast:               1500;    /* toasts au-dessus de tout */
+  --z-tooltip:             2000;
+}
+
+/* ============================================================================
+   Base reset minimaliste + application tokens sur éléments primitifs.
+   ============================================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-corps);
+  font-size: var(--fs-corps);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normale);
+  color: var(--color-texte);
+  background-color: var(--color-fond);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titre);
+  font-weight: var(--fw-semi);
+  line-height: var(--lh-serree);
+  letter-spacing: var(--ls-serree);
+  color: var(--color-bois);
+  margin: 0 0 var(--space-4);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-medium); }
+h4 { font-size: var(--fs-h4); font-weight: var(--fw-medium); }
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+a {
+  color: var(--color-tan);
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-tan-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-xs);
+}
+
+img,
+picture,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilitaire container global */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--pad-container-x);
+}
+
+/* Respect utilisateur : réduction animation si prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
