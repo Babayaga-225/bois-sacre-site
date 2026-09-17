@@ -1,0 +1,75 @@
+/* src/layout.css */
+/* Layout utilities */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+/* Responsive container padding */
+@media (min-width: 576px) {
+  .container {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* 12‑column grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  transition: background-color var(--transition-medium);
+  z-index: 1000;
+}
+
+/* Header transparent on scroll – will be toggled via JS (not included here) */
+header.scrolled {
+  background-color: rgba(247, 245, 241, 0.9);
+}
+
+/* Footer */
+footer {
+  background-color: var(--surface);
+  padding: var(--space-6) var(--space-4);
+}
+
+/* Footer grid (3 columns) */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 576px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
