@@ -1,0 +1,89 @@
+/* src/components/placeholder.css */
+/* Visual placeholders — palette DA uniquement, aucune image externe. */
+
+.ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.ph-hero {
+  aspect-ratio: auto;
+  min-height: 88vh;
+  background:
+    radial-gradient(ellipse at 25% 35%, rgba(216, 149, 69, 0.38), transparent 55%),
+    radial-gradient(ellipse at 78% 72%, rgba(122, 138, 109, 0.32), transparent 60%),
+    linear-gradient(160deg, #1C0000 0%, #2A1F17 45%, #6B5D51 100%);
+}
+
+.ph-mood-nature {
+  background:
+    linear-gradient(135deg, rgba(122, 138, 109, 0.75), transparent 60%),
+    linear-gradient(45deg, #7A8A6D 0%, #1C0000 100%);
+}
+
+.ph-mood-medit {
+  background:
+    radial-gradient(circle at 32% 28%, rgba(216, 149, 69, 0.55), transparent 62%),
+    linear-gradient(180deg, #F7F5F1 0%, #CC916E 100%);
+}
+
+.ph-mood-africain {
+  background: linear-gradient(135deg, #D89545 0%, #CC916E 45%, #1C0000 100%);
+}
+
+.ph-cat-salon {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(216, 149, 69, 0.4), transparent 55%),
+    linear-gradient(160deg, #6B5D51 0%, #1C0000 100%);
+}
+
+.ph-cat-chambre {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(204, 145, 110, 0.5), transparent 55%),
+    linear-gradient(200deg, #2A1F17 0%, #6B5D51 100%);
+}
+
+.ph-cat-sam {
+  background:
+    linear-gradient(135deg, rgba(216, 149, 69, 0.35), transparent 60%),
+    linear-gradient(45deg, #CC916E 0%, #7A8A6D 100%);
+}
+
+.ph-cat-bureau {
+  background:
+    radial-gradient(circle at 60% 40%, rgba(122, 138, 109, 0.45), transparent 60%),
+    linear-gradient(220deg, #1C0000 0%, #2A1F17 60%, #6B5D51 100%);
+}
+
+.ph-atelier {
+  aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(ellipse at 40% 30%, rgba(216, 149, 69, 0.4), transparent 55%),
+    linear-gradient(180deg, #6B5D51 0%, #1C0000 100%);
+}
+
+.ph-journal-1 {
+  background: linear-gradient(135deg, #7A8A6D 0%, #2A1F17 100%);
+}
+
+.ph-journal-2 {
+  background: linear-gradient(135deg, #CC916E 0%, #6B5D51 100%);
+}
+
+.ph-journal-3 {
+  background: linear-gradient(135deg, #D89545 0%, #1C0000 100%);
+}
+
+.ph-ig-1 { background: linear-gradient(135deg, #1C0000, #6B5D51); }
+.ph-ig-2 { background: linear-gradient(135deg, #CC916E, #D89545); }
+.ph-ig-3 { background: linear-gradient(135deg, #7A8A6D, #2A1F17); }
+.ph-ig-4 { background: linear-gradient(135deg, #6B5D51, #CC916E); }
+.ph-ig-5 { background: linear-gradient(135deg, #D89545, #7A8A6D); }
+.ph-ig-6 { background: linear-gradient(135deg, #2A1F17, #CC916E); }
+
+.ph-square {
+  aspect-ratio: 1 / 1;
+}

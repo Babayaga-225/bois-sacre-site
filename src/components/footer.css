@@ -1,0 +1,121 @@
+/* src/components/footer.css */
+
+.site-footer {
+  background-color: #1C0000;
+  color: var(--bg);
+  padding: var(--space-13) 0 var(--space-8);
+  margin-top: var(--space-14);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1.4fr;
+    gap: var(--space-10);
+  }
+}
+
+.footer-col-title {
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+}
+
+.footer-text {
+  color: rgba(247, 245, 241, 0.75);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-link {
+  color: rgba(247, 245, 241, 0.85);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--gold);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid rgba(247, 245, 241, 0.2);
+  background-color: rgba(247, 245, 241, 0.06);
+  color: var(--bg);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(247, 245, 241, 0.5);
+}
+
+.newsletter-input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  background-color: rgba(247, 245, 241, 0.1);
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(247, 245, 241, 0.25);
+  border-radius: 50%;
+  color: var(--bg);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: #1C0000;
+}
+
+.footer-bottom {
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(247, 245, 241, 0.12);
+  text-align: center;
+  color: rgba(247, 245, 241, 0.55);
+  font-size: 0.8125rem;
+}
