@@ -4,12 +4,16 @@
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 500;
-  padding: var(--space-2) var(--space-4);
+  font-size: 0.9375rem;
+  padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
-  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  line-height: 1.2;
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
+.button:hover { transform: translateY(-1px); }
 
 /* Primary gold button */
 .button-primary {
