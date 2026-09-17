@@ -77,6 +77,69 @@
   background: linear-gradient(135deg, #D89545 0%, #1C0000 100%);
 }
 
+/* Projet portfolio placeholders */
+.ph-proj-villa-doum {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(216, 149, 69, 0.35), transparent 55%),
+    linear-gradient(160deg, #6B5D51 0%, #2A1F17 100%);
+}
+.ph-proj-k-beach {
+  background:
+    linear-gradient(160deg, rgba(122, 138, 109, 0.4), transparent 55%),
+    linear-gradient(45deg, #7A8A6D 0%, #D89545 100%);
+}
+.ph-proj-ile-bouley {
+  background:
+    radial-gradient(circle at 70% 60%, rgba(216, 149, 69, 0.4), transparent 55%),
+    linear-gradient(200deg, #7A8A6D 0%, #1C0000 100%);
+}
+.ph-proj-w-kitchen {
+  background:
+    radial-gradient(circle at 40% 50%, rgba(216, 149, 69, 0.5), transparent 55%),
+    linear-gradient(135deg, #CC916E 0%, #6B5D51 100%);
+}
+.ph-proj-hotelier {
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(216, 149, 69, 0.45), transparent 55%),
+    linear-gradient(160deg, #1C0000 0%, #2A1F17 55%, #6B5D51 100%);
+}
+.ph-proj-scolaire {
+  background: linear-gradient(135deg, #7A8A6D 0%, #6B5D51 60%, #2A1F17 100%);
+}
+.ph-proj-tabouret {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(216, 149, 69, 0.55), transparent 60%),
+    linear-gradient(160deg, #CC916E 0%, #1C0000 100%);
+}
+.ph-proj-bao {
+  background:
+    radial-gradient(ellipse at 25% 65%, rgba(122, 138, 109, 0.35), transparent 55%),
+    linear-gradient(200deg, #6B5D51 0%, #2A1F17 100%);
+}
+.ph-proj-inside-out {
+  background:
+    linear-gradient(135deg, #F7F5F1 0%, #CC916E 50%, #1C0000 100%);
+}
+.ph-proj-cabanon {
+  background:
+    radial-gradient(circle at 60% 40%, rgba(216, 149, 69, 0.4), transparent 55%),
+    linear-gradient(45deg, #7A8A6D 0%, #6B5D51 100%);
+}
+
+/* Territoires */
+.ph-terr-residentiel {
+  background: linear-gradient(135deg, #CC916E, #1C0000);
+}
+.ph-terr-hospitality {
+  background: linear-gradient(135deg, #7A8A6D, #D89545);
+}
+.ph-terr-tertiaire {
+  background: linear-gradient(135deg, #6B5D51, #2A1F17);
+}
+.ph-terr-mobilier {
+  background: linear-gradient(135deg, #D89545, #CC916E);
+}
+
 .ph-ig-1 { background: linear-gradient(135deg, #1C0000, #6B5D51); }
 .ph-ig-2 { background: linear-gradient(135deg, #CC916E, #D89545); }
 .ph-ig-3 { background: linear-gradient(135deg, #7A8A6D, #2A1F17); }
