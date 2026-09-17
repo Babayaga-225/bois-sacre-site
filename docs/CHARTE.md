@@ -1,12 +1,20 @@
-# Charte graphique · Bois Sacré
+# Charte graphique · Atelier Boisacré
 
-Document de référence pour toute production visuelle du site et des supports connexes (fiches produits, réseaux sociaux, print).
+Document de référence pour toute production visuelle du site et des supports connexes (portfolio, planches d'ambiance, réseaux sociaux, print).
 
 ## 1. Positionnement
 
-Atelier de mobilier et décoration à Abidjan. **Matières nobles, savoir-faire artisanal, ambiances tenues.** L'univers visuel doit dégager : chaleur, sincérité, sobriété, temporalité (pièces qui traversent les décennies).
+**Cabinet d'architecture d'intérieur** à Abidjan, fondé par Coulibaly Mohamed Parfait.
+Interventions : résidentiel · hospitality · tertiaire/institutionnel · mobilier signature sur mesure.
 
-Registre à éviter : discount, saturation, effets vitrine.
+**Signature** (bio Instagram, à utiliser telle quelle) :
+> « Né d'un besoin d'ancrage : faire dialoguer l'objet, l'espace et l'héritage. »
+
+L'univers visuel doit dégager : **chaleur, sincérité, sobriété, ancrage, temporalité.** Chaque pièce, chaque espace montré doit sembler pensé pour vieillir bien.
+
+Registre à éviter : discount, saturation, effets vitrine, mise en scène artificielle.
+
+Une **variante e-commerce** (catalogue mobilier style Kave Home) est archivée dans `docs/archive/` au cas où l'atelier ouvrirait plus tard une boutique en ligne.
 
 ## 2. Palette
 
