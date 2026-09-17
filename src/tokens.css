@@ -1,0 +1,59 @@
+/* src/tokens.css */
+/* Design Tokens */
+:root {
+  /* Palette */
+  --bg: #F7F5F1;
+  --surface: #FFFFFF;
+  --tan: #CC916E;
+  --wood: #1C0000;
+  --gold: #D89545;
+  --olive: #7A8A6D;
+  --text: #2A1F17;
+  --text-muted: #6B5D51;
+  --border: #E8E1D6;
+
+  /* Typography */
+  --font-title: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Fluid type scale for headings (32px to 80px) */
+  --h1-size: clamp(32px, 5vw, 80px);
+  --h2-size: clamp(24px, 4vw, 64px);
+  --h3-size: clamp(20px, 3vw, 48px);
+  --h4-size: clamp(16px, 2.5vw, 36px);
+  --h5-size: clamp(14px, 2vw, 28px);
+  --h6-size: clamp(12px, 1.5vw, 24px);
+
+  /* Spacing scale (4px to 128px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+  --space-13: 80px;
+  --space-14: 96px;
+  --space-15: 112px;
+  --space-16: 128px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Box shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.4s ease;
+}
