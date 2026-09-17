@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bois Sacré — Mobilier & Décoration d'atelier · Abidjan</title>
+  <meta name="description" content="Atelier de mobilier et décoration à Abidjan. Pièces sur mesure, matières nobles, savoir-faire artisanal." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="src/tokens.css" />
+  <link rel="stylesheet" href="src/base.css" />
+  <link rel="stylesheet" href="src/layout.css" />
+  <link rel="stylesheet" href="src/components/placeholder.css" />
+  <link rel="stylesheet" href="src/components/header.css" />
+  <link rel="stylesheet" href="src/components/footer.css" />
+  <link rel="stylesheet" href="src/components/section.css" />
+  <link rel="stylesheet" href="src/components/hero.css" />
+  <link rel="stylesheet" href="src/components/button.css" />
+  <link rel="stylesheet" href="src/components/card.css" />
+  <link rel="stylesheet" href="src/components/badge.css" />
+  <link rel="stylesheet" href="src/components/modal.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">Bois Sacré</a>
+      <nav class="nav-primary" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="#categories" class="nav-link">Salon</a></li>
+          <li><a href="#categories" class="nav-link">Chambre</a></li>
+          <li><a href="#categories" class="nav-link">Salle à manger</a></li>
+          <li><a href="#categories" class="nav-link">Bureau</a></li>
+          <li><a href="#categories" class="nav-link">Décoration</a></li>
+          <li><a href="#categories" class="nav-link">Luminaires</a></li>
+          <li><a href="#categories" class="nav-link">Extérieur</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Recherche" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Panier" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </button>
+        <button class="icon-btn burger" aria-label="Menu" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg ph ph-hero" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Atelier · Abidjan</span>
+      <h1 id="hero-title" class="hero-title">L'art du bois, façonné pour vos ambiances.</h1>
+      <p class="hero-subtitle">Mobilier et décoration sur mesure. Du salon à la terrasse, des pièces pensées par nos artisans pour vivre longtemps.</p>
+      <div class="hero-cta">
+        <a href="#categories" class="button button-primary">Découvrir la collection</a>
+        <a href="#atelier" class="button button-secondary">Prendre RDV atelier</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="moodboards" aria-labelledby="mood-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">Ambiances</span>
+        <h2 id="mood-title" class="section-title">Trois univers, une même signature</h2>
+        <p class="section-subtitle">Choisissez l'ambiance qui vous ressemble. Chaque moodboard rassemble matières, teintes et pièces pour composer votre intérieur.</p>
+      </header>
+      <div class="mood-grid">
+        <a href="#" class="mood-card">
+          <div class="ph ph-mood-nature" aria-hidden="true"></div>
+          <div class="mood-card-content">
+            <h3 class="mood-card-title">Nature brute</h3>
+            <span class="mood-card-tag">Bois massif · Lin · Olive</span>
+          </div>
+        </a>
+        <a href="#" class="mood-card">
+          <div class="ph ph-mood-medit" aria-hidden="true"></div>
+          <div class="mood-card-content">
+            <h3 class="mood-card-title">Méditerranée</h3>
+            <span class="mood-card-tag">Terracotta · Chaux · Rotin</span>
+          </div>
+        </a>
+        <a href="#" class="mood-card">
+          <div class="ph ph-mood-africain" aria-hidden="true"></div>
+          <div class="mood-card-content">
+            <h3 class="mood-card-title">Africain contemporain</h3>
+            <span class="mood-card-tag">Iroko · Cuir · Ambre</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories" aria-labelledby="cat-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">Catalogue</span>
+        <h2 id="cat-title" class="section-title">Explorer par pièce</h2>
+      </header>
+      <div class="category-grid">
+        <a href="#" class="category-card">
+          <div class="ph ph-cat-salon" aria-hidden="true"></div>
+          <span class="category-card-label">Salon</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="ph ph-cat-chambre" aria-hidden="true"></div>
+          <span class="category-card-label">Chambre</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="ph ph-cat-sam" aria-hidden="true"></div>
+          <span class="category-card-label">Salle à manger</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="ph ph-cat-bureau" aria-hidden="true"></div>
+          <span class="category-card-label">Bureau</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="atelier" aria-labelledby="atelier-title">
+    <div class="container">
+      <div class="atelier">
+        <div class="atelier-visual">
+          <div class="ph ph-atelier" aria-hidden="true"></div>
+        </div>
+        <div class="atelier-text">
+          <span class="section-eyebrow">L'atelier</span>
+          <h2 id="atelier-title" class="section-title">Un savoir-faire, à Abidjan.</h2>
+          <p class="atelier-para">Fondé par Coulibaly Mohamed, architecte d'intérieur, Bois Sacré rassemble un collectif d'ébénistes et d'artisans qui pensent chaque pièce comme un objet à vivre. Nos essences sont sélectionnées localement, nos finitions sont faites main.</p>
+          <p class="atelier-para">Nous accompagnons particuliers et professionnels sur des projets sur mesure : conseil, croquis, prototypage, livraison.</p>
+          <a href="#" class="button button-primary">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="journal" aria-labelledby="journal-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">Journal</span>
+        <h2 id="journal-title" class="section-title">Notes d'atelier</h2>
+        <p class="section-subtitle">Inspirations, coulisses, matières que nous aimons.</p>
+      </header>
+      <div class="journal-grid">
+        <a href="#" class="journal-card">
+          <div class="ph ph-journal-1" aria-hidden="true"></div>
+          <span class="journal-date">12 sept. 2026</span>
+          <h3 class="journal-title">Le teck massif, pourquoi nous l'aimons</h3>
+          <p class="journal-excerpt">Résistant, patiné, sincère : un tour du bois que nous travaillons le plus dans nos pièces d'extérieur.</p>
+        </a>
+        <a href="#" class="journal-card">
+          <div class="ph ph-journal-2" aria-hidden="true"></div>
+          <span class="journal-date">28 août 2026</span>
+          <h3 class="journal-title">Composer un salon en trois teintes</h3>
+          <p class="journal-excerpt">Une méthode simple pour équilibrer chaud et froid, matière et vide, dans une pièce à vivre.</p>
+        </a>
+        <a href="#" class="journal-card">
+          <div class="ph ph-journal-3" aria-hidden="true"></div>
+          <span class="journal-date">14 août 2026</span>
+          <h3 class="journal-title">Trois pièces africaines qui traversent les décennies</h3>
+          <p class="journal-excerpt">Retour sur trois classiques que nous réinterprétons pour nos collections d'automne.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="instagram" aria-labelledby="ig-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">@bois.sacre</span>
+        <h2 id="ig-title" class="section-title">L'atelier au quotidien</h2>
+      </header>
+      <div class="ig-grid">
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-1" aria-hidden="true"></div></a>
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-2" aria-hidden="true"></div></a>
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-3" aria-hidden="true"></div></a>
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-4" aria-hidden="true"></div></a>
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-5" aria-hidden="true"></div></a>
+        <a href="#" class="ig-tile" aria-label="Publication Instagram"><div class="ph ph-square ph-ig-6" aria-hidden="true"></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-narrow" id="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-band">
+        <span class="cta-eyebrow">Sur mesure</span>
+        <h2 id="cta-title" class="cta-title">Votre pièce, dessinée avec vous.</h2>
+        <p class="cta-lead">Envoyez-nous votre brief : matières, dimensions, usage. Nous revenons vers vous sous 48 h avec un premier croquis et un devis.</p>
+        <a href="#" class="button button-primary">Démarrer un projet</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-col-title">Bois Sacré · Abidjan</h3>
+          <p class="footer-text">Atelier ouvert sur rendez-vous.</p>
+          <p class="footer-text">Cocody · Abidjan, Côte d'Ivoire</p>
+          <p class="footer-text">Lun – Ven · 9 h – 18 h</p>
+          <p class="footer-text">contact@boissacre.ci</p>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Explorer</h3>
+          <ul class="footer-links">
+            <li><a href="#categories" class="footer-link">Catalogue</a></li>
+            <li><a href="#moodboards" class="footer-link">Ambiances</a></li>
+            <li><a href="#atelier" class="footer-link">L'atelier</a></li>
+            <li><a href="#journal" class="footer-link">Journal</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Rester en contact</h3>
+          <p class="footer-text">Nouveautés d'atelier, une fois par mois.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <label class="visually-hidden" for="newsletter-email">Adresse e-mail</label>
+            <input id="newsletter-email" class="newsletter-input" type="email" placeholder="votre@email.ci" required />
+            <button type="submit" class="button button-primary">S'inscrire</button>
+          </form>
+          <ul class="social-list">
+            <li><a href="#" class="social-link" aria-label="Instagram">IG</a></li>
+            <li><a href="#" class="social-link" aria-label="Facebook">FB</a></li>
+            <li><a href="#" class="social-link" aria-label="Pinterest">PI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Bois Sacré · Fait à Abidjan.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
