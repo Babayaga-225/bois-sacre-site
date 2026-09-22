@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier Boisacré · Architecture d'intérieur & Design · Abidjan</title>
-  <meta name="description" content="Atelier Boisacré, cabinet d'architecture d'intérieur à Abidjan. Résidentiel, hospitality, mobilier sur mesure. Fondé par Coulibaly Mohamed Parfait." />
+  <title>Boisacré · Architecture & Design · Abidjan</title>
+  <meta name="description" content="Boisacré, cabinet d'architecture d'intérieur et de design à Abidjan. Résidentiel, hospitality, mobilier sur mesure. Fondé par Coulibaly Mohamed Parfait." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="src/tokens.css?v=4" />
-  <link rel="stylesheet" href="src/base.css?v=4" />
-  <link rel="stylesheet" href="src/layout.css?v=4" />
-  <link rel="stylesheet" href="src/components/placeholder.css?v=4" />
-  <link rel="stylesheet" href="src/components/header.css?v=4" />
-  <link rel="stylesheet" href="src/components/footer.css?v=4" />
-  <link rel="stylesheet" href="src/components/section.css?v=4" />
-  <link rel="stylesheet" href="src/components/hero.css?v=4" />
-  <link rel="stylesheet" href="src/components/button.css?v=4" />
-  <link rel="stylesheet" href="src/components/card.css?v=4" />
-  <link rel="stylesheet" href="src/components/badge.css?v=4" />
-  <link rel="stylesheet" href="src/components/modal.css?v=4" />
+  <link rel="stylesheet" href="src/tokens.css?v=5" />
+  <link rel="stylesheet" href="src/base.css?v=5" />
+  <link rel="stylesheet" href="src/layout.css?v=5" />
+  <link rel="stylesheet" href="src/components/placeholder.css?v=5" />
+  <link rel="stylesheet" href="src/components/header.css?v=5" />
+  <link rel="stylesheet" href="src/components/footer.css?v=5" />
+  <link rel="stylesheet" href="src/components/section.css?v=5" />
+  <link rel="stylesheet" href="src/components/hero.css?v=5" />
+  <link rel="stylesheet" href="src/components/button.css?v=5" />
+  <link rel="stylesheet" href="src/components/card.css?v=5" />
+  <link rel="stylesheet" href="src/components/badge.css?v=5" />
+  <link rel="stylesheet" href="src/components/modal.css?v=5" />
+  <link rel="stylesheet" href="src/components/animations.css?v=5" />
+
+  <script src="src/scripts/reveal.js?v=5" defer></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand">Atelier Boisacré</a>
+      <a href="#" class="brand" aria-label="Boisacré · Accueil">
+        <img class="brand-logo" src="src/assets/logo-boisacre.jpg" alt="Boisacré · Architecture & Design" />
+      </a>
       <nav class="nav-primary" aria-label="Menu principal">
         <ul class="nav-list">
           <li><a href="#projets" class="nav-link">Projets</a></li>
@@ -39,7 +45,6 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <a href="#contact" class="button button-primary" style="display:none;">Démarrer</a>
         <button class="icon-btn burger" aria-label="Menu" type="button">
           <span></span><span></span><span></span>
         </button>
@@ -48,11 +53,13 @@
   </header>
 
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-bg ph ph-hero" aria-hidden="true"></div>
+    <div class="hero-bg ph ph-hero" aria-hidden="true">
+      <img class="hero-bg-image" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80&fit=crop&auto=format" alt="" />
+    </div>
     <div class="hero-content">
       <span class="hero-eyebrow">Architecture d'intérieur · Abidjan</span>
       <h1 id="hero-title" class="hero-title">Faire dialoguer l'objet, l'espace et l'héritage.</h1>
-      <p class="hero-subtitle">Atelier Boisacré · cabinet d'architecture d'intérieur fondé par Coulibaly Mohamed Parfait. Résidentiel, hospitality, mobilier sur mesure.</p>
+      <p class="hero-subtitle">Boisacré · cabinet d'architecture d'intérieur fondé par Coulibaly Mohamed Parfait. Résidentiel, hospitality, mobilier sur mesure.</p>
       <div class="hero-cta">
         <a href="#projets" class="button button-primary">Voir les projets</a>
         <a href="#contact" class="button button-secondary">Démarrer un projet</a>
@@ -69,7 +76,9 @@
       </header>
       <div class="project-grid">
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-villa-doum" aria-hidden="true"></div>
+          <div class="ph ph-proj-villa-doum">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&fit=crop&auto=format" alt="Villa Doum · vue intérieure" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Résidentiel</span>
             <h3 class="project-title">Villa Doum</h3>
@@ -77,7 +86,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-k-beach" aria-hidden="true"></div>
+          <div class="ph ph-proj-k-beach">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80&fit=crop&auto=format" alt="K-Beach · aménagement bord de mer" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Hospitality</span>
             <h3 class="project-title">K-Beach</h3>
@@ -85,7 +96,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-ile-bouley" aria-hidden="true"></div>
+          <div class="ph ph-proj-ile-bouley">
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&q=80&fit=crop&auto=format" alt="Île Bouley Lounge" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Hospitality</span>
             <h3 class="project-title">Île Bouley Lounge</h3>
@@ -93,7 +106,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-w-kitchen" aria-hidden="true"></div>
+          <div class="ph ph-proj-w-kitchen">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&fit=crop&auto=format" alt="W-Kitchen · cuisine sur mesure" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Résidentiel</span>
             <h3 class="project-title">W-Kitchen</h3>
@@ -101,7 +116,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-hotelier" aria-hidden="true"></div>
+          <div class="ph ph-proj-hotelier">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&fit=crop&auto=format" alt="Complexe hôtelier G." loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Hospitality</span>
             <h3 class="project-title">Complexe hôtelier G.</h3>
@@ -109,7 +126,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-scolaire" aria-hidden="true"></div>
+          <div class="ph ph-proj-scolaire">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80&fit=crop&auto=format" alt="Complexe scolaire" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Tertiaire · En cours</span>
             <h3 class="project-title">Complexe scolaire</h3>
@@ -117,7 +136,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-tabouret" aria-hidden="true"></div>
+          <div class="ph ph-proj-tabouret">
+            <img src="https://images.unsplash.com/photo-1449247613801-ab06418e2861?w=800&q=80&fit=crop&auto=format" alt="Tabouret Multifaces · pièce signature" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Mobilier</span>
             <h3 class="project-title">Tabouret Multifaces</h3>
@@ -125,7 +146,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-bao" aria-hidden="true"></div>
+          <div class="ph ph-proj-bao">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&fit=crop&auto=format" alt="Projet immobilier BAO-ci" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Immobilier</span>
             <h3 class="project-title">BAO-ci · lots 01 & 02</h3>
@@ -133,7 +156,9 @@
           </div>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="project-card" target="_blank" rel="noopener">
-          <div class="ph ph-proj-inside-out" aria-hidden="true"></div>
+          <div class="ph ph-proj-inside-out">
+            <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80&fit=crop&auto=format" alt="Série Inside Out" loading="lazy" />
+          </div>
           <div class="project-card-body">
             <span class="project-badge">Concept</span>
             <h3 class="project-title">Inside Out I & II</h3>
@@ -197,7 +222,7 @@
     <div class="manifesto-inner">
       <span class="manifesto-eyebrow">Notre approche</span>
       <p id="approche-title" class="manifesto-quote">« Né d'un besoin d'ancrage : faire dialoguer l'objet, l'espace et l'héritage. »</p>
-      <span class="manifesto-author">Atelier Boisacré · manifeste</span>
+      <span class="manifesto-author">Boisacré · manifeste</span>
       <div class="method">
         <div class="method-step">
           <div class="method-step-index">01</div>
@@ -231,28 +256,36 @@
       </header>
       <div class="territory-grid">
         <a href="#projets" class="territory-card">
-          <div class="ph ph-terr-residentiel" aria-hidden="true"></div>
+          <div class="ph ph-terr-residentiel">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=80&fit=crop&auto=format" alt="" loading="lazy" />
+          </div>
           <div class="territory-card-content">
             <h3 class="territory-card-title">Résidentiel</h3>
             <p class="territory-card-refs">Villa Doum · W-Kitchen · Cabanon-JB</p>
           </div>
         </a>
         <a href="#projets" class="territory-card">
-          <div class="ph ph-terr-hospitality" aria-hidden="true"></div>
+          <div class="ph ph-terr-hospitality">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80&fit=crop&auto=format" alt="" loading="lazy" />
+          </div>
           <div class="territory-card-content">
             <h3 class="territory-card-title">Hospitality</h3>
             <p class="territory-card-refs">K-Beach · Île Bouley · Complexe hôtelier G.</p>
           </div>
         </a>
         <a href="#projets" class="territory-card">
-          <div class="ph ph-terr-tertiaire" aria-hidden="true"></div>
+          <div class="ph ph-terr-tertiaire">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80&fit=crop&auto=format" alt="" loading="lazy" />
+          </div>
           <div class="territory-card-content">
             <h3 class="territory-card-title">Tertiaire & institutionnel</h3>
             <p class="territory-card-refs">Complexe scolaire · BAO-ci</p>
           </div>
         </a>
         <a href="#projets" class="territory-card">
-          <div class="ph ph-terr-mobilier" aria-hidden="true"></div>
+          <div class="ph ph-terr-mobilier">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=700&q=80&fit=crop&auto=format" alt="" loading="lazy" />
+          </div>
           <div class="territory-card-content">
             <h3 class="territory-card-title">Mobilier signature</h3>
             <p class="territory-card-refs">Tabouret Multifaces · Inside Out</p>
@@ -271,19 +304,25 @@
       </header>
       <div class="journal-grid">
         <a href="https://www.behance.net/mohamedcouliba1" class="journal-card" target="_blank" rel="noopener">
-          <div class="ph ph-journal-1" aria-hidden="true"></div>
+          <div class="ph ph-journal-1">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80&fit=crop&auto=format" alt="Villa Doum" loading="lazy" />
+          </div>
           <span class="journal-date">Étude de cas</span>
           <h3 class="journal-title">Villa Doum · penser une maison qui vieillit bien</h3>
           <p class="journal-excerpt">Choix des essences, gestion de la lumière abidjanaise, matériaux locaux : le récit d'une commande familiale menée sur douze mois.</p>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="journal-card" target="_blank" rel="noopener">
-          <div class="ph ph-journal-2" aria-hidden="true"></div>
+          <div class="ph ph-journal-2">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80&fit=crop&auto=format" alt="Île Bouley Lounge" loading="lazy" />
+          </div>
           <span class="journal-date">Étude de cas</span>
           <h3 class="journal-title">Île Bouley Lounge · quand l'espace raconte le lieu</h3>
           <p class="journal-excerpt">Concept identitaire, palette matière, rapport à la lagune : comment un lounge devient signature d'un site.</p>
         </a>
         <a href="https://www.behance.net/mohamedcouliba1" class="journal-card" target="_blank" rel="noopener">
-          <div class="ph ph-journal-3" aria-hidden="true"></div>
+          <div class="ph ph-journal-3">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80&fit=crop&auto=format" alt="Tabouret Multifaces" loading="lazy" />
+          </div>
           <span class="journal-date">Coulisses</span>
           <h3 class="journal-title">Tabouret Multifaces · du croquis d'atelier au prototype</h3>
           <p class="journal-excerpt">Six mois entre l'esquisse et la première pièce livrée. Retour sur une pièce signature de l'atelier.</p>
@@ -339,8 +378,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3 class="footer-col-title">Atelier Boisacré</h3>
-          <p class="footer-text">Cabinet d'architecture d'intérieur.</p>
+          <h3 class="footer-col-title">Boisacré</h3>
+          <p class="footer-text">Cabinet d'architecture d'intérieur & design.</p>
           <p class="footer-text">Abidjan, Côte d'Ivoire.</p>
           <p class="footer-text">Sur rendez-vous.</p>
         </div>
@@ -348,7 +387,7 @@
           <h3 class="footer-col-title">Contact</h3>
           <ul class="footer-links">
             <li><a class="footer-link" href="mailto:atelierboisacre@gmail.com">atelierboisacre@gmail.com</a></li>
-            <li><a class="footer-link" href="tel:+22507589261 98">+225 07 58 92 61 98</a></li>
+            <li><a class="footer-link" href="tel:+2250758926198">+225 07 58 92 61 98</a></li>
             <li><a class="footer-link" href="#contact">Formulaire de brief</a></li>
           </ul>
         </div>
@@ -362,7 +401,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Atelier Boisacré · Coulibaly Mohamed Parfait · Fait à Abidjan.
+        &copy; 2026 Boisacré · Coulibaly Mohamed Parfait · Fait à Abidjan.
       </div>
     </div>
   </footer>
