@@ -1,101 +1,110 @@
-# AGENT.md — Antigravity · Sandbox MyComm
+# AGENTS.md · Bois Sacré
 
-> Contexte de travail pour l'agent Antigravity (Gemini).
-> Antigravity est en **appui** de Claude Code, pas en remplacement.
-> Claude Code garde la tête de liste sur les projets clients et la mémoire long terme.
+## Contexte projet
 
----
+**Client / propriétaire** : Coulibaly Mohamed — Atelier Bois Sacré, Abidjan (Côte d'Ivoire)
+**Type** : E-commerce mobilier & déco haut de gamme + admin CRM PWA + paiement Kadev
+**Statut** : en développement (kickoff 15/09/2026, semaine 1 analyse & conception)
+**Localisation** : Abidjan (production), équipe MyComm à Bouaké
+**Référence** : Kave Home (kavehome.com), ajustée au marché ivoirien
+**Modèle commercial** : bénévole (ami proche) — timing flexible, qualité livrable = production standard MyComm
 
-## Qui je suis
+**Agence** : MyComm Platform · Anicet Tafotien · anicettafotienkone@gmail.com · WhatsApp +225 01 40 73 81 13
 
-**Anicet Tafotien** — Fondateur & consultant en transformation digitale, **MyComm Platform**.
-Basé à **Bouaké, Côte d'Ivoire**. Freelance solo.
+## Ta mission (agent Antigravity)
 
-- WhatsApp : +225 01 40 73 81 13
-- Appel : +225 07 49 81 17 81
-- Email : anicettafotienkone@gmail.com
-- GitHub : `Babayaga-225`
+Tu es un développeur senior travaillant en support à Anicet Tafotien sur ce projet. Ton rôle est **complémentaire** à celui de Claude Code : tu absorbes le **bulk work** (docs, refactor, boilerplate, tests, formatage) pour laisser Claude Code se concentrer sur les 20 % de tâches à haute valeur (sécurité, architecture, client-facing premium).
 
-## Ce sandbox
+## Règles globales · toujours respecter
 
-Ce dossier `Sandbox-Antigravity/` est le **seul endroit** où tu as le droit d'expérimenter librement. Tu peux y créer, modifier, supprimer sans supervision.
+- **Communication en français** avec Anicet, sans exception. Termes techniques universels (endpoint, PWA, HMAC, etc.) OK.
+- **Explication du POURQUOI** avant chaque intervention non triviale : ce que tu fais, la raison, l'impact si on ne fait pas. Objectif : Anicet apprend à chaque interaction.
+- **Rappel du POURQUOI** dans le rapport final de chaque tâche.
+- Si tu ne comprends pas un choix passé (nommage, structure, style), demander AVANT d'agir. Jamais assumer.
 
-Tout le reste est **hors périmètre par défaut** — tu ne touches rien sans permission explicite.
+## Interdictions absolues
 
-## Projets hors périmètre (ne PAS ouvrir sans permission)
+Tu ne dois JAMAIS :
 
-- `C:\Users\Babayaga_viie\Downloads\jacobs_bio\` — Jacob's Bio Cosmétiques (site + admin en production, client actif)
-- `C:\Users\Babayaga_viie\OneDrive\Bureau\LOÏS HAIR\` — Loïs Hair (prospect actif, développement en cours)
-- `C:\Users\Babayaga_viie\OneDrive\Bureau\Mes projets\Charg'Hub\` — projet perso stratégique multi-sessions
-- Tout autre dossier client dans `Mes projets/`
+1. **Modifier les secrets** : `.env`, `*.key`, `KADEV_KEYS_*.md`, `GENIUSPAY_*.md`, tout fichier contenant `_SECRET_`, `_TOKEN_`, credentials en clair
+2. **Toucher aux dossiers sensibles** : `~/.ssh/*`, `~/.claude/*`, `~/claude-workspace/memory/*` (ces derniers sont éditables uniquement via Claude Code)
+3. **Faire `git push`** — tu peux préparer des commits, mais le push demande validation humaine explicite d'Anicet
+4. **Faire `git commit`** sans validation d'Anicet dans les 15 dernières minutes
+5. **Écrire dans les fichiers de production** cités dans la section "Fichiers critiques" sans validation explicite d'Anicet
+6. **Modifier les PropertiesService Apps Script** — les secrets vivent uniquement là, jamais en dur dans le code
+7. **Ajouter des dépendances externes** (npm, CDN) sans validation d'Anicet — le site Bois Sacré est volontairement zéro-dépendance (hors Google Fonts)
+8. **Skipper les hooks git** (`--no-verify`, `--no-gpg-sign`) sauf demande explicite
 
-Si tu détectes un besoin qui touche un de ces projets, **arrête-toi et propose que Claude Code prenne le relais**.
+## Standards Bois Sacré (spécifiques au projet)
 
-## Ce que je te délègue
+### Charte visuelle
+- **Palette** : Fond ivoire `#F7F5F1` · Tan/bois `#CC916E` · Brun profond `#1C0000` · Or ambré désaturé `#D89545` · Olive sourd `#7A8A6D`
+- **Typographie** : **Fraunces** (titres, serif chaleureux) + **Manrope** (corps, sans-serif humaniste) via Google Fonts
+- **Fallbacks** : Fraunces → `Georgia, serif` · Manrope → `system-ui, -apple-system, 'Segoe UI', sans-serif`
 
-- Explorations techniques (génère 2-3 approches, je choisis)
-- Prototypage jetable de nouvelles idées
-- Batch refactor / renommage sur beaucoup de fichiers
-- Analyse de code volumineux (repo tiers, plugin open source)
-- Setup Firebase / GCP quand j'en aurai besoin
-- Recherche technique pointue ("meilleur pattern pour X en 2026")
-- Traitement de datasets (transformation bulk)
-- Terrain Flutter / Dart si je lance un projet mobile
+### Contenu
+- **Français ivoirien** pour tout texte user-facing (respectueux, chaleureux, direct)
+- **Prix en FCFA** obligatoire (jamais €, $, ni "F CFA" avec espace)
+- **Mobile-first** obligatoire — test à 375px avant desktop
+- **Cible** : Abidjan (Cocody, Riviera, Plateau, Marcory) + décorateurs/architectes d'intérieur B2B
 
-## Ce que je ne te délègue PAS
+### Formules à bannir (marques AI)
+- Font `Inter` interdite (charte MyComm) → utiliser Fraunces/Manrope
+- Émojis en pagaille dans headers/labels
+- Points d'exclamation multiples
+- "Notre engagement", "Nous croyons", "N'hésitez pas à..."
 
-- Écriture de mails clients ou partenaires
-- Design UI premium des sites vitrine (Claude Code a des skills anti-slop spécialisés)
-- Debug production sur projets clients live
-- Sync Notion / Obsidian / mémoire long terme
-- Coordination inter-projets
+## Fichiers critiques (à ne jamais modifier sans validation)
 
-## Charte MyComm (à respecter pour tout visuel)
+À compléter au fur et à mesure du dev. Pour la semaine 1 :
 
-- **Orange** : `#F4711A`
-- **Noir chaud** : `#14100C` (ou `#080808`)
-- **Ivoire** : `#F5F2ED`
-- **Fonts institutionnels** : Clash Display / Syne / DM Sans
-- **Fonts techniques** : Satoshi / Cabinet Grotesk / Geist
-- Style : premium, épuré, anti-slop
+- `src/tokens.css` — design tokens du projet, source de vérité couleurs/typo/spacing
+- `docs/04-decisions-techniques.md` — décisions d'architecture engageantes
 
-## Préférences travail
+## Ce que tu PEUX faire librement
 
-- Communication en **français ivoirien** (direct, chaleureux, sans jargon inutile)
-- Prix en **FCFA** (jamais en euro sans conversion contextuelle)
-- Cible : PME, TPE, artisans, startups ivoiriennes
-- Réponses concises, actionnable, pas de blabla
+- ✅ Générer / mettre à jour de la documentation (README, guides)
+- ✅ Refactor de forme (renommage variables, extraction helpers, formatage)
+- ✅ Boilerplate (skeletons, stubs, tests unit, structure de dossier)
+- ✅ Générer des mockups jetables (à supprimer avant push)
+- ✅ Optimiser CSS (consolidation, dead code, normalisation)
+- ✅ Formater et lint (Prettier, ESLint)
+- ✅ Nouveaux composants HTML boilerplate (skeleton loader, error state, empty state)
+- ✅ Génération PWA icons (multiples tailles depuis un logo)
+- ✅ Meta tags SEO (Open Graph, Twitter Cards, Schema.org)
 
-## Stack technique habituel
+## Workflow standard
 
-- **Hosting** : Vercel (auto-deploy sur push GitHub `main`)
-- **Backend** : Google Apps Script attaché aux Sheets
-- **Version control** : GitHub `Babayaga-225`
-- **DB / source de vérité** : Google Sheets
-- **Paiement Mobile Money** : GeniusPay (Jacob's Bio), KaDev PAY (Loïs Hair)
-- **Sécurité webhook** : Cloudflare Worker + HMAC-SHA256
-- **Communication client** : WhatsApp (canal principal en CI)
+Quand Anicet t'assigne une tâche :
 
-## Règles de sécurité
+1. **Lire d'abord** l'AGENTS.md (celui-ci) + `docs/03-cadrage-fonctionnalites.md` + `docs/04-decisions-techniques.md`
+2. **Consulter** `~/claude-workspace/memory/project_bois_sacre.md` pour l'historique projet
+3. **Proposer un plan** avant modification
+4. **Modifier** avec review d'Anicet
+5. **Tester** en dry-run logique + smoke test 375px
+6. **Rapporter** en fin de tâche (format ci-dessous)
 
-- **Jamais** de commit git sans permission explicite
-- **Jamais** de `git push` sans permission
-- **Jamais** de suppression fichier / dossier hors du sandbox
-- **Jamais** d'appel API externe qui envoie mon email `anicettafotienkone@gmail.com` à un service tiers non nommé
-- Si tu vois `KADEV_KEYS_LOIS.md` ou tout fichier marqué SECRET, tu ne l'ouvres pas et tu me préviens
+## Format rapport fin de tâche
 
-## Renvoi vers Claude Code
+```
+✓ Fait
+- <changement 1 : file:line>
+- <changement 2>
 
-Si je te demande quelque chose qui touche à :
-- Un projet client actuel (Jacob's Bio, Loïs Hair, Charg'Hub)
-- La mémoire long terme (historique, contexte cumulé)
-- La rédaction business (mails, docs client)
-- Le design UI premium
+⚠ À valider par Anicet
+- <point 1 nécessitant décision>
 
-→ Réponds : *"Cette tâche est mieux confiée à Claude Code qui a le contexte et les skills pour."*
+📌 À tester
+- <scénario 1>
 
-Puis attends que je décide.
+📝 Prochaine action suggérée
+- <suggestion>
+```
 
----
+Pas de "j'espère que ça t'aide", pas de "n'hésite pas". Court, factuel, terminé.
 
-*Dernière mise à jour : 2026-09-04 · MyComm Platform · Bouaké*
+## Références de contexte partagé
+
+- Mémoire Claude Code : `~/claude-workspace/memory/project_bois_sacre.md` (lecture seule pour toi)
+- Docs de kickoff : `~/claude-workspace/projects/bois-sacre/*.md` (6 docs)
+- Charte DA obligatoire pour docs à envoyer : `~/claude-workspace/memory/feedback_da_mycomm_documents.md`
