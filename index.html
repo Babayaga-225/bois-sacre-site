@@ -11,21 +11,21 @@
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="src/tokens.css?v=5" />
-  <link rel="stylesheet" href="src/base.css?v=5" />
-  <link rel="stylesheet" href="src/layout.css?v=5" />
-  <link rel="stylesheet" href="src/components/placeholder.css?v=5" />
-  <link rel="stylesheet" href="src/components/header.css?v=5" />
-  <link rel="stylesheet" href="src/components/footer.css?v=5" />
-  <link rel="stylesheet" href="src/components/section.css?v=5" />
-  <link rel="stylesheet" href="src/components/hero.css?v=5" />
-  <link rel="stylesheet" href="src/components/button.css?v=5" />
-  <link rel="stylesheet" href="src/components/card.css?v=5" />
-  <link rel="stylesheet" href="src/components/badge.css?v=5" />
-  <link rel="stylesheet" href="src/components/modal.css?v=5" />
-  <link rel="stylesheet" href="src/components/animations.css?v=5" />
+  <link rel="stylesheet" href="src/tokens.css?v=6" />
+  <link rel="stylesheet" href="src/base.css?v=6" />
+  <link rel="stylesheet" href="src/layout.css?v=6" />
+  <link rel="stylesheet" href="src/components/placeholder.css?v=6" />
+  <link rel="stylesheet" href="src/components/header.css?v=6" />
+  <link rel="stylesheet" href="src/components/footer.css?v=6" />
+  <link rel="stylesheet" href="src/components/section.css?v=6" />
+  <link rel="stylesheet" href="src/components/hero.css?v=6" />
+  <link rel="stylesheet" href="src/components/button.css?v=6" />
+  <link rel="stylesheet" href="src/components/card.css?v=6" />
+  <link rel="stylesheet" href="src/components/badge.css?v=6" />
+  <link rel="stylesheet" href="src/components/modal.css?v=6" />
+  <link rel="stylesheet" href="src/components/animations.css?v=6" />
 
-  <script src="src/scripts/reveal.js?v=5" defer></script>
+  <script src="src/scripts/reveal.js?v=6" defer></script>
 </head>
 <body>
 
@@ -376,32 +376,45 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3 class="footer-col-title">Boisacré</h3>
-          <p class="footer-text">Cabinet d'architecture d'intérieur & design.</p>
-          <p class="footer-text">Abidjan, Côte d'Ivoire.</p>
-          <p class="footer-text">Sur rendez-vous.</p>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Contact</h3>
-          <ul class="footer-links">
-            <li><a class="footer-link" href="mailto:atelierboisacre@gmail.com">atelierboisacre@gmail.com</a></li>
-            <li><a class="footer-link" href="tel:+2250758926198">+225 07 58 92 61 98</a></li>
-            <li><a class="footer-link" href="#contact">Formulaire de brief</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Voir plus</h3>
-          <p class="footer-text">Le portfolio complet et les mises à jour se passent sur nos réseaux.</p>
-          <ul class="social-list">
-            <li><a class="social-link" href="https://www.instagram.com/boisacre.interiordesign/" target="_blank" rel="noopener" aria-label="Instagram">IG</a></li>
-            <li><a class="social-link" href="https://www.behance.net/mohamedcouliba1" target="_blank" rel="noopener" aria-label="Behance">Be</a></li>
-          </ul>
+      <div class="footer-hero">
+        <a href="#" class="footer-brand" aria-label="Boisacré · retour en haut">
+          <img class="footer-logo" src="src/assets/logo-boisacre.jpg" alt="Boisacré · Architecture & Design" />
+        </a>
+        <nav class="footer-nav" aria-label="Menu bas de page">
+          <a href="#projets" class="footer-nav-link">Projets</a>
+          <a href="#services" class="footer-nav-link">Services</a>
+          <a href="#approche" class="footer-nav-link">Approche</a>
+          <a href="#territoires" class="footer-nav-link">Territoires</a>
+          <a href="#journal" class="footer-nav-link">Journal</a>
+          <a href="#contact" class="footer-nav-link">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/boisacre.interiordesign/" class="social-tile" target="_blank" rel="noopener" aria-label="Instagram · @boisacre.interiordesign">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.behance.net/mohamedcouliba1" class="social-tile" target="_blank" rel="noopener" aria-label="Behance · portfolio de Coulibaly Mohamed Parfait">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+            </svg>
+          </a>
         </div>
       </div>
+    </div>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <div class="container">
       <div class="footer-bottom">
-        &copy; 2026 Boisacré · Coulibaly Mohamed Parfait · Fait à Abidjan.
+        <p class="footer-contact">
+          <span>Abidjan, Côte d'Ivoire</span>
+          <a href="mailto:atelierboisacre@gmail.com">atelierboisacre@gmail.com</a>
+          <a href="tel:+2250758926198">+225 07 58 92 61 98</a>
+        </p>
+        <p class="footer-copy">&copy; 2026 Boisacré · Coulibaly Mohamed Parfait · Fait à Abidjan.</p>
       </div>
     </div>
   </footer>
